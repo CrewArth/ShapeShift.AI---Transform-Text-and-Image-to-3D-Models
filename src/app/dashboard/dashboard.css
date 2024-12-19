@@ -1,0 +1,282 @@
+/* Header/Navbar Styles */
+.navbar {
+  @apply fixed top-0 left-0 right-0 border-b z-50;
+  background-color: var(--background);
+  border-color: var(--card-border);
+  backdrop-filter: blur(8px);
+}
+
+.navbar-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between;
+}
+
+.navbar-brand {
+  @apply text-2xl font-bold;
+  background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.navbar-links {
+  @apply flex items-center gap-6;
+}
+
+.nav-link {
+  @apply text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-200 font-medium;
+}
+
+/* Dashboard Layout */
+.dashboard-wrapper {
+  @apply min-h-screen bg-[var(--background)] flex flex-col;
+}
+
+.dashboard-main {
+  @apply flex-1 container mx-auto px-4 py-8;
+}
+
+.dashboard-container {
+  @apply min-h-screen bg-[var(--background)];
+  padding-top: 5rem;
+}
+
+.dashboard-header {
+  @apply py-8 mt-16;
+}
+
+.dashboard-title {
+  @apply text-3xl font-bold text-[var(--foreground)] text-center;
+}
+
+.dashboard-subtitle {
+  @apply text-[var(--foreground-secondary)] text-center mt-2;
+}
+
+.dashboard-grid {
+  @apply container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8;
+}
+
+/* Dashboard Cards */
+.workspace-card {
+  @apply p-8 rounded-lg h-full transition-all duration-200
+         bg-[var(--background-secondary)] border border-[var(--border)];
+}
+
+.workspace-card:hover {
+  @apply shadow-lg;
+  transform: translateY(-2px);
+}
+
+.workspace-card-icon-wrapper {
+  @apply w-14 h-14 rounded-xl mb-6 flex items-center justify-center;
+  background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
+}
+
+.workspace-card-icon {
+  @apply w-8 h-8 text-white;
+}
+
+.workspace-card-title {
+  @apply text-2xl font-semibold mb-3 text-[var(--foreground)];
+}
+
+.workspace-card-description {
+  @apply text-[var(--foreground-secondary)] mb-6;
+}
+
+.workspace-card-button {
+  @apply flex items-center text-purple-600 dark:text-purple-400 font-medium;
+}
+
+.workspace-card-button-icon {
+  @apply w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform;
+}
+
+/* Footer Styles */
+.footer {
+  @apply bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800;
+}
+
+.footer-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+}
+
+.footer-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+}
+
+.footer-brand {
+  @apply text-2xl font-bold mb-4;
+  background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.footer-description {
+  @apply text-[var(--text-secondary)];
+}
+
+.footer-section-title {
+  @apply text-lg font-semibold text-[var(--text-primary)] mb-4;
+}
+
+.footer-links {
+  @apply space-y-2;
+}
+
+.footer-link {
+  @apply text-[var(--text-secondary)] hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 block;
+}
+
+.footer-bottom {
+  @apply border-t border-gray-200 dark:border-gray-800 mt-12 pt-8 text-center text-[var(--text-secondary)];
+}
+
+.dashboard-footer {
+  @apply mt-auto py-8 bg-[var(--background-secondary)] border-t border-[var(--border)];
+}
+
+.footer-content {
+  @apply container mx-auto px-4 flex flex-col md:flex-row
+    items-center justify-center gap-8;
+}
+
+.footer-text {
+  @apply text-[var(--foreground-secondary)];
+}
+
+.footer-links {
+  @apply flex items-center justify-center gap-6 flex-wrap;
+}
+
+.footer-link {
+  @apply text-[var(--foreground-secondary)] hover:text-[var(--foreground)]
+    transition-colors duration-200;
+}
+
+.dashboard-card {
+  @apply bg-[var(--background-secondary)] rounded-lg overflow-hidden
+         shadow-lg hover:shadow-xl transition-all duration-300
+         border border-[var(--border)] relative;
+  height: 400px;
+  width: 100%;
+}
+
+.card-image {
+  @apply relative w-full overflow-hidden flex items-center justify-center;
+  height: 200px;
+}
+
+.card-image img {
+  @apply w-full h-full object-contain transition-transform duration-300;
+  padding: 1rem;
+}
+
+.card-content {
+  @apply p-6 text-center;
+}
+
+.card-title {
+  @apply text-xl font-bold mb-2;
+  color: var(--foreground);
+}
+
+.card-description {
+  @apply mb-4;
+  color: var(--foreground-secondary);
+}
+
+.card-button {
+  @apply w-full px-6 py-3 rounded-lg font-medium text-white
+         bg-gradient-to-r from-purple-600 to-blue-500
+         hover:from-purple-700 hover:to-blue-600
+         transition-all duration-200
+         flex items-center justify-center gap-2;
+}
+
+.empty-state {
+  @apply col-span-full flex flex-col items-center justify-center py-12 text-center;
+}
+
+.empty-state-icon {
+  @apply text-6xl mb-4;
+  color: var(--foreground-secondary);
+}
+
+.empty-state-title {
+  @apply text-2xl font-bold mb-2;
+  color: var(--foreground);
+}
+
+.empty-state-text {
+  @apply max-w-md mx-auto;
+  color: var(--foreground-secondary);
+}
+
+.empty-state-button {
+  @apply mt-6 px-6 py-3 rounded-lg font-medium text-white
+         bg-gradient-to-r from-purple-600 to-blue-500
+         hover:from-purple-700 hover:to-blue-600
+         transition-all duration-200
+         flex items-center justify-center gap-2;
+}
+
+.stats-container {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 px-4;
+}
+
+.stat-card {
+  @apply bg-[var(--background-secondary)] rounded-xl p-6
+         border border-[var(--border)] shadow-sm;
+}
+
+.stat-title {
+  @apply text-[var(--foreground-secondary)] text-sm font-medium mb-2;
+}
+
+.stat-value {
+  @apply text-2xl font-bold text-[var(--foreground)];
+}
+
+.stat-change {
+  @apply text-sm font-medium mt-1;
+}
+
+.stat-change.positive {
+  @apply text-green-500;
+}
+
+.stat-change.negative {
+  @apply text-red-500;
+}
+
+/* Common styles for all cards with background images */
+.text-to-3d-card .card-content,
+.image-to-3d-card .card-content,
+.forum-card .card-content {
+  color: var(--foreground);
+}
+
+.text-to-3d-card .card-description,
+.image-to-3d-card .card-description,
+.forum-card .card-description {
+  color: var(--foreground-secondary);
+}
+
+.text-to-3d-card .card-title,
+.image-to-3d-card .card-title,
+.forum-card .card-title {
+  color: var(--foreground);
+}
+
+.new-badge {
+  @apply ml-2 inline-flex items-center px-2.5 py-0.5 rounded-full
+    text-xs font-medium bg-purple-500 text-white;
+} 
+
+.cl-userButtonPopoverCard {
+  background: linear-gradient(135deg, rgb(124, 58, 237) 0%, rgb(59, 130, 246) 100%);
+}

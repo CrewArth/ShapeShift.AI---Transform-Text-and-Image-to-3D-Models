@@ -1,0 +1,139 @@
+.pricing-header {
+  @apply text-center mb-12;
+}
+
+.pricing-title {
+  @apply text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent;
+}
+
+.pricing-subtitle {
+  @apply text-lg text-[var(--foreground-secondary)];
+}
+
+.pricing-tabs {
+  @apply flex justify-center gap-4;
+}
+
+.cl-userButtonPopoverCard {
+  background: linear-gradient(135deg, rgb(124, 58, 237) 0%, rgb(59, 130, 246) 100%);
+}
+
+.tab-button {
+  @apply px-6 py-2 rounded-lg font-medium transition-all duration-200
+         border border-[var(--border)] bg-[var(--background)]
+         hover:bg-[var(--background-secondary)];
+}
+
+.tab-button.active {
+  @apply bg-gradient-to-r from-purple-600 to-blue-500 text-white border-transparent;
+}
+
+.tab-button.disabled {
+  @apply opacity-50 cursor-not-allowed hover:bg-[var(--background)];
+}
+
+.pricing-card {
+  @apply relative flex flex-col p-6 rounded-xl border border-[var(--border)]
+         bg-[var(--background-secondary)] transition-all duration-200;
+}
+
+.pricing-card.popular {
+  @apply border-purple-500 shadow-lg;
+}
+
+.popular-badge {
+  @apply absolute -top-3 left-1/2 transform -translate-x-1/2
+         bg-gradient-to-r from-purple-600 to-blue-500
+         text-white text-sm font-medium px-4 py-1 rounded-full;
+}
+
+.pricing-row {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto w-full mt-6;
+}
+
+.pricing-plan-info {
+  @apply text-center mb-6;
+}
+
+.pricing-plan-name {
+  @apply text-xl font-bold mb-4 text-[var(--foreground)];
+}
+
+.pricing-plan-price {
+  @apply flex items-center justify-center gap-1 mb-2;
+}
+
+.pricing-plan-price .currency {
+  @apply text-2xl font-medium text-[var(--foreground)];
+}
+
+.pricing-plan-price .amount {
+  @apply text-4xl font-bold text-[var(--foreground)];
+}
+
+.pricing-plan-price .duration {
+  @apply text-lg text-[var(--foreground-secondary)];
+}
+
+.pricing-plan-credits {
+  @apply text-[var(--foreground-secondary)];
+}
+
+.pricing-card-features {
+  @apply space-y-4 mb-8;
+}
+
+.feature-item {
+  @apply flex items-center gap-3;
+}
+
+.feature-icon {
+  @apply w-5 h-5 text-green-500;
+}
+
+.pricing-card-button {
+  @apply w-full py-3 px-6 rounded-lg font-medium text-white
+         bg-gradient-to-r from-purple-600 to-blue-500
+         hover:from-purple-700 hover:to-blue-600
+         focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2
+         disabled:opacity-50 disabled:cursor-not-allowed
+         transition-all duration-200;
+}
+
+.pricing-card-button:hover:not(:disabled) {
+  @apply transform -translate-y-0.5;
+}
+
+/* Notification Banner */
+.notification-banner {
+  @apply flex items-center gap-3 p-4 mb-8 rounded-lg
+         bg-[var(--background-secondary)] border border-[var(--border)]
+         text-[var(--foreground-secondary)];
+}
+
+.notification-banner svg {
+  @apply text-blue-500 flex-shrink-0;
+}
+
+.notification-banner p {
+  @apply text-sm leading-6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .pricing-row {
+    @apply flex-col;
+  }
+
+  .pricing-card {
+    @apply w-full;
+  }
+  
+  .pricing-card.popular {
+    transform: none;
+  }
+
+  .pricing-plan-price .amount {
+    @apply text-2xl;
+  }
+} 
