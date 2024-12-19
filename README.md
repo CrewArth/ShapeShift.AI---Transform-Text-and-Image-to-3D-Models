@@ -1,0 +1,2 @@
+# ShapeShift.AI---Transform-Text-and-Image-to-3D-Models
+ShapeShift AI: Transforming Text and Images into 3D Models is an AI-driven platform that converts text descriptions and 2D images into detailed 3D models. Using advanced deep learning, it empowers users to create, customize, and visualize 3D designs effortlessly, offering an interactive and intuitive experience for both creatives and professionals.
